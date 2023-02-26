@@ -1,0 +1,412 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
+html {
+	font-size: 10px;
+	font-family: "Montserrat", sans-serif;
+	scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body 
+{
+    background-color: pink;
+    background-size: cover;
+    background-position:center;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li
+{
+    width: 120px;
+    margin: 15;
+    padding: 15px;
+}
+.menu-bar ul li a
+{
+  text-decoration: none;
+  color: #fff;  
+}
+.active, .menu-bar ul li:hover
+{
+  background: #2bad0d;
+  border-radius: 3px;
+}
+.sub-menu-1
+{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+ width: 150px;
+ padding: 10px;
+ border-bottom: 1px dotted #fff;  
+ background: transparent;
+ border-radius: 0;
+ text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: #b2ff00;
+}
+.fa-angle-double-right
+{
+ float: right;   
+}
+
+/* Home Section */
+.row
+{
+   display: inline block;
+   justify-content: space-between;
+   align-items: center;
+   margin: 90px; 
+   margin-top: auto;
+}
+.col-1
+{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 100px;
+}
+.col-1 h2
+{
+    font-size: 60px;
+    color: hsla(138, 92%, 24%, 0.829);
+    animation: text_reveal_name 0.10s ease forwards;
+    animation-delay: 4s;
+}
+.col-1 h3
+{
+    font-size: 30px;
+    color: hsla(138, 92%, 24%, 0.829);
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+button
+{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: hsla(138, 94%, 13%, 0.829);
+    background: linear-gradient(to right, #2bad0d, #b2ff00);
+    border-radius: 6px;
+    cursor: pointer; 
+    transition: 0.5s;
+}
+button img
+{
+    width: 30px;
+    display: none; 
+}
+button:hover img
+{
+    display:block;
+    align-items: center;
+    justify-content: space-between;
+}
+button:hover
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.col-1::after
+{
+    content: '';
+    width: 10px;
+    height: 185px;
+    background: linear-gradient( #2bad0d, #b2ff00);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+/* End of Home Section */
+
+/* Services */
+.services .services {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+.services .service-top {
+	max-width: 500px;
+	margin: 0 auto;
+    color: hsla(138, 92%, 24%, 0.829);
+    font-size: 1.5em;
+    font-weight: 40px;
+    margin-bottom: 20px;
+    text-align:center;
+    text-transform: uppercase;
+}
+.services .service-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+.services .service-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.services .service-item::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background:  rgb(0,100,0);
+	opacity: 0.9;
+	z-index: -1;
+}
+.services .service-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+.services .service-item h2 {
+	font-size: "";
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.services .service-item p {
+	color: white;
+	text-align: left;
+}
+/* End of Services */
+
+/* Featured Products */
+.projects .projects {
+	flex-direction: column;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+.projects .projects-header h1 {
+    margin-top: 50px;
+	margin-bottom: 20px;
+    text-align: center;
+    color: hsla(138, 92%, 24%, 0.829);
+    font-size: 50px;
+    font-weight: 40px;
+}
+.projects .all-projects {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.projects .project-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.projects .project-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+    background: rgb(0,100,0);
+	color: white;
+    border-radius: 10px;
+}
+.projects .project-info h1 {
+	font-size: 1.5rem;
+	font-weight: 500px;
+}
+.projects .project-info h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
+}
+.projects .project-info p {
+	color: white;
+}
+.projects .project-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+.projects .project-img:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+}
+.projects .project-img img {
+	transition: 0.3s ease transform;
+}
+.projects .project-item:hover .project-img img {
+	transform: scale(1.1);
+}
+/* End of Featured Products */
+
+/* contact Section */
+#contact .contact {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+    margin-top: 50px;
+	margin-bottom: 20px;
+    text-align: center;
+    color: hsla(138, 92%, 24%, 0.829);
+    font-size: 40px;
+    font-weight: 30px;
+}
+contact .contact-items {
+	max-width: 1000px;
+	width: 100%;
+}
+#contact .contact-item {
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 0  hsla(138, 92%, 24%, 0.829);
+	transition: 0.3s ease box-shadow;
+}
+#contact .contact-item:hover {
+	box-shadow: 0px 0px 5px 0  hsla(138, 92%, 24%, 0.829);
+}
+#contact .icon {
+	width: 70px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+#contact .contact-info h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#contact .contact-info h2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+/*End contact Section */
+
+
+@media only screen and (max-width: 700px)
+{
+    .menu-bar ul
+    {
+        width: 100%;
+        background-color: rgb(0,100,0);
+        position: block;
+        top: 0;
+        right: 0;
+    } 
+    .menu-bar ul li
+    {
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    #contact .contact-item
+    {
+            width: 80%;
+    }
+    .col-1::after
+{
+    content: '';
+    width: 10px;
+    height: 392px;
+    background: linear-gradient( #2bad0d, #b2ff00);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+.row
+{
+   display: inline block;
+   justify-content: space-between;
+   align-items: center;
+   margin: 90px; 
+   margin-top: auto;
+}
+.col-1
+{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: -20px;
+}
+.col-1 h2
+{
+    font-size: 60px;
+    color: hsla(138, 92%, 24%, 0.829);
+    animation: text_reveal_name 0.10s ease forwards;
+    animation-delay: 4s;
+}
+.col-1 h3
+{
+    font-size: 30px;
+    color: hsla(138, 92%, 24%, 0.829);
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+}   

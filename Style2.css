@@ -1,0 +1,130 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
+html {
+	font-size: 15px;
+	font-family: "Montserrat", sans-serif;
+	scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body 
+{
+    background-color: pink;
+    background-size: cover;
+    background-position:center;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Featured Products */
+.projects .projects {
+	flex-direction: column;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+.projects .projects-header h1 {
+    margin-top: 50px;
+	margin-bottom: 20px;
+    text-align: center;
+    color: hsla(138, 92%, 24%, 0.829);
+    font-size: 50px;
+    font-weight: 40px;
+}
+.projects .all-projects {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.projects .project-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.projects .project-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+    background: rgb(0,100,0);
+	color: white;
+    border-radius: 10px;
+}
+.projects .project-info h1 {
+	font-size: 1.5rem;
+	font-weight: 500px;
+}
+.projects .project-info h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
+}
+.projects .project-info p {
+	color: white;
+}
+.projects .project-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+.projects .project-img:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: none;
+	opacity: 0.7;
+}
+.projects .project-img img {
+	transition: 0.3s ease transform;
+}
+.projects .project-item:hover .project-img img {
+	transform: scale(1.1);
+}
+/* End of Featured Products */
+
+/* Button */
+button
+{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: hsla(138, 94%, 13%, 0.829);
+    background: linear-gradient(to right, #2bad0d, #b2ff00);
+    border-radius: 6px;
+    cursor: pointer; 
+    transition: 0.5s;
+}
+button img
+{
+    width: 30px;
+    display: none; 
+}
+button:hover img
+{
+    display:block;
+    align-items: center;
+    justify-content: space-between;
+}
+button:hover
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* End of Button */
